@@ -17,6 +17,7 @@ class CreateProizvodiTable extends Migration
             $table->increments('id');
             $table->string('naziv');
             $table->text('opis');
+            $table->string('slika');
             $table->timestamps();
         });
     }
