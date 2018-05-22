@@ -15,4 +15,8 @@ use App\Proizvod;
 
 Route::get('/', 'ProizvodiController@index');
 
+Route::get('/majice/create', 'ProizvodiController@create');
+
 Route::get('/majice/{majica}', 'ProizvodiController@show');
+
+Route::post('/majice', 'ProizvodiController@store');

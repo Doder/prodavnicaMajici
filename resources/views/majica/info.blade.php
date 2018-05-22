@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('layouts.master')
 @section('content')
     <h1>{{$majica->naziv}}</h1>
     <h2>{{$majica->opis}}</h2>
