@@ -20,3 +20,6 @@ Route::get('/majice/create', 'ProizvodiController@create');
 Route::get('/majice/{majica}', 'ProizvodiController@show');
 
 Route::post('/majice', 'ProizvodiController@store');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
