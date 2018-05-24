@@ -41,4 +41,11 @@ class ProizvodiController extends Controller
         return redirect('/');
         
     }
+
+    public function destroy($id){
+        $item = Proizvod::find($id);
+        $item->delete();
+
+        return redirect('/');
+    }
 }
