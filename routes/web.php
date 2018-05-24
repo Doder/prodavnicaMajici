@@ -15,12 +15,12 @@ use App\Proizvod;
 
 Route::get('/', 'ProizvodiController@index');
 
-Route::get('/majice/create', 'ProizvodiController@create');
+Route::get('/majice/create', 'ProizvodiController@create')->middleware('auth');
 
-Route::post('/majice/{majica}/delete', 'ProizvodiController@destroy');
+Route::post('/majice/{majica}/delete', 'ProizvodiController@destroy')->middleware('auth');
 Route::get('/majice/{majica}', 'ProizvodiController@show');
 
-Route::post('/majice', 'ProizvodiController@store');
+Route::post('/majice', 'ProizvodiController@store')->middleware('auth');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
