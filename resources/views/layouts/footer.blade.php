@@ -1,8 +1,3 @@
-
-<!-- Footer -->
-<footer class="footer">
-    
+<footer>
+Footer
 </footer>
-        
-<!-- Footer -->
-                      
