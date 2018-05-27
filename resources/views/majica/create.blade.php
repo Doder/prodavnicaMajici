@@ -3,21 +3,23 @@
 @section('content')
 
 <h1>Dodaj novu majicu</h1>
+<div class="box-white half-size">
 <form method="POST" action="/majice" enctype="multipart/form-data">
     @csrf
     <div class="form-group">
         <label for="naziv" >Naziv: </label>
-        <input type="text" id="naziv" name="naziv" >
+        <input type="text" id="naziv" name="naziv" class="form-control">
     </div>
     <div class="form-group">
         <label for="opis">Opis: </label>
-        <input type="text" id="opis" name="opis" >
+        <input type="text" id="opis" name="opis" class="form-control" >
     </div>
     <div class="form-gorup">
         <label for="slika">Slika: </label>
-        <input type="file" name="slika" id="slika" accept=".jpg, .jpeg, .png">
+        <input type="file" name="slika" id="slika" accept=".jpg, .jpeg, .png" class="form-control">
     </div>
+    <br/>
     <button type="submit" class="btn btn-primary">Dodaj</button>
 </form>
-
+</div>
 @endsection

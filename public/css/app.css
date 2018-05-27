@@ -10411,6 +10411,27 @@ a.text-dark:focus {
   }
 }
 
+body,
+html {
+  height: 100%;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+}
+
 .navbar-laravel {
   background-color: #fff;
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
@@ -10436,5 +10457,25 @@ header {
   background-color: silver;
   border-radius: 0 0 10px 10px;
   padding: 10px 5px;
+}
+
+.box-white {
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid silver;
+  background-color: white;
+}
+
+.half-size {
+  width: 50%;
+}
+
+.footer {
+  background-color: #d4d6d8;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 25px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
