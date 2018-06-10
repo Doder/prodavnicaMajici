@@ -40,16 +40,20 @@ header{
 }
 
 .image-title{
+  position: relative;
   text-align: center;
   background-color: silver;
   border-radius: 0 0 10px 10px;
   padding: 10px 5px;
+  .title{
+    width: 50%;
+  }
 }
 
 .box-white{
   padding: 20px;
   border-radius: 10px;
-  border: 1px solid silver;
+  border: 1px solid rgb(39, 12, 12);
   background-color: white;
 }
 
@@ -63,4 +67,37 @@ header{
   padding: 10px 0;
   margin-top: 25px;
   flex-shrink: 0;
+}
+
+.inline-btns{
+  float: left;
+  margin: 0 5px;
+}
+
+.shirt-price{
+  color: white;
+  text-align: center;
+  background-color: red;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 40%;
+  border-radius: 0 0 10px 0;
+  padding: 10px 5px;
+}
+
+.right-price{
+  position: absolute;
+  right: 20px;
+}
+
+.price-item{
+  position: relative;
+}
+
+.total{
+  float: right;
+  margin-top: 10px;
+  font-size: 1.2rem;
 }

@@ -2,7 +2,7 @@
 <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
         <div class="container">
             <a class="navbar-brand" href="{{ url('/') }}">
-                Prodavnica Majici
+                Tondo
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -32,6 +32,9 @@
                                     {{ __('Dodaj Majicu') }}
                                 </a>    
                                 @endif
+                                <a class="dropdown-item" href="/korpa">
+                                    {{ __('Moja Korpa') }}
+                                </a>
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
                                                     document.getElementById('logout-form').submit();">

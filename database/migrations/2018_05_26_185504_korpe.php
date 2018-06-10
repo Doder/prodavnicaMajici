@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateProizvodiTable extends Migration
+class Korpe extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,11 @@ class CreateProizvodiTable extends Migration
      */
     public function up()
     {
-        Schema::create('proizvodi', function (Blueprint $table) {
+        Schema::create('korpe', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('naziv');
-            $table->text('opis');
-            $table->string('slika');
-            $table->decimal('cijena', 5, 2);
+            $table->integer('user_id')->unsigned();
             $table->timestamps();
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 
@@ -30,6 +28,6 @@ class CreateProizvodiTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('proizvodi');
+        Schema::dropIfExists('korpe');
     }
 }

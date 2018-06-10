@@ -32,6 +32,7 @@ class ProizvodiController extends Controller
 
         $majica->naziv = request('naziv');
         $majica->opis = request('opis');
+        $majica->cijena = request('cijena');
         $majica->slika = $naziv_slike;
 
         $request->file('slika')->storeAs('public', $naziv_slike);

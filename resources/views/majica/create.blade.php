@@ -8,15 +8,19 @@
     @csrf
     <div class="form-group">
         <label for="naziv" >Naziv: </label>
-        <input type="text" id="naziv" name="naziv" class="form-control">
+        <input required type="text" id="naziv" name="naziv" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="cijena" >Cijena: </label>
+        <input required type="number" id="cijena" name="cijena" class="form-control" min="0" value="0" step=".01">
     </div>
     <div class="form-group">
         <label for="opis">Opis: </label>
-        <input type="text" id="opis" name="opis" class="form-control" >
+        <input required type="text" id="opis" name="opis" class="form-control" >
     </div>
     <div class="form-gorup">
         <label for="slika">Slika: </label>
-        <input type="file" name="slika" id="slika" accept=".jpg, .jpeg, .png" class="form-control">
+        <input required type="file" name="slika" id="slika" accept=".jpg, .jpeg, .png" class="form-control">
     </div>
     <br/>
     <button type="submit" class="btn btn-primary">Dodaj</button>
