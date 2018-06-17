@@ -39,7 +39,7 @@ class ProizvodiController extends Controller
 
         $majica->save();
 
-        return redirect('/');
+        return redirect('/majice');
         
     }
 
@@ -47,6 +47,6 @@ class ProizvodiController extends Controller
         $item = Proizvod::find($id);
         $item->delete();
 
-        return redirect('/');
+        return redirect('/majice');
     }
 }

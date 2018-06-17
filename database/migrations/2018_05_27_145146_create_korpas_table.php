@@ -13,13 +13,14 @@ class CreateKorpasTable extends Migration
      */
     public function up()
     {
-        Schema::create('korpa_proizvodi', function (Blueprint $table) {
-            $table->integer('korpa_id')->unsigned();
+        Schema::create('korpa', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('user_id')->unsigned();
             $table->integer('proizvod_id')->unsigned();
             $table->integer('kolicina')->unsigned();
             $table->timestamps();
             $table->foreign('proizvod_id')->references('id')->on('proizvodi');
-            $table->foreign('korpa_id')->references('id')->on('korpe');
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 
@@ -30,6 +31,6 @@ class CreateKorpasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('korpa_proizvodi');
+        Schema::dropIfExists('korpa');
     }
 }

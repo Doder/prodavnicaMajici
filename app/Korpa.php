@@ -6,6 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Korpa extends Model
 {
-    protected $table = 'korpe';
+    protected $table = 'korpa';
     protected $primaryKey = 'id';
 }

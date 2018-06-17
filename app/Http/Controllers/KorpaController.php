@@ -5,50 +5,50 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Korpa;
-use App\KorpaProizvodi;
 use App\Proizvod;
 use Auth;
 
 class KorpaController extends Controller
 {
     public function show(){
-        
-        $ki = Korpa::where('user_id', Auth::user()->id)->first();
-        if(!$ki){
-            $results = array();
-            $ukupno = 0;
-            return view('korpa.show', compact('results', 'ukupno'));
-        }else{
-            $ki = $ki->id;
-        }
-        $proizvodi = KorpaProizvodi::where('korpa_id', $ki)->get();
+        $user_id = Auth::user()->id;
+        $proizvodi = Korpa::where('user_id', $user_id)->get();
         $ukupno = 0;
         $results = array();
         foreach ($proizvodi as $p){
             $info = Proizvod::find($p->proizvod_id);
-            $ukupno = $ukupno + $info->cijena;
+            $info->id = $p->id;
+            $info->kolicina = $p->kolicina;
+            $ukupno = $ukupno + ($info->cijena * $info->kolicina);
             array_push($results,$info);
         }
         return view('korpa.show', compact('results', 'ukupno'));
     }
 
-    public function create($id){
+    public function store($pid){
         $user_id = Auth::user()->id;
-        $exists = Korpa::where('user_id', $user_id)->count();
-        if(!$exists){
-            $korpa = new Korpa;
-            $korpa->user_id = $user_id;
-            $korpa->save();
+
+        $result = Korpa::where('proizvod_id', $pid)->first();
+        if($result){
+            $result->kolicina = request('kolicina');
+            $result->save();
+            return redirect('/majice');
         }
 
-        $korpa = Korpa::where('user_id', $user_id)->first();
-        
-        $kp = new KorpaProizvodi;
-        $kp->proizvod_id = $id;
-        $kp->korpa_id = $korpa->id;
-        $kp->kolicina = 1;
-        $kp->save();
+        $item = new Korpa;
 
+        $item->user_id = $user_id;
+        $item->proizvod_id = $pid;
+        $item->kolicina = request('kolicina');
+
+        $item->save();
+
+        return redirect('/majice');
+    }
+
+    public function destroy($id){
+        $item = Korpa::find($id);
+        $item->delete();
 
         return redirect('/');
     }

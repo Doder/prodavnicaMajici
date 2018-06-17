@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('content')
-    <div class="container">
+    <div class="container container-with-margin">
     <div class="row">
     @foreach ($majice as $majica)
         

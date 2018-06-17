@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);/*!
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);@import url(https://fonts.googleapis.com/css?family=Kaushan+Script);@import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic);@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700);@import url(https://use.fontawesome.com/releases/v5.0.13/css/all.css);/*!
  * Bootstrap v4.1.1 (https://getbootstrap.com/)
  * Copyright 2011-2018 The Bootstrap Authors
  * Copyright 2011-2018 Twitter, Inc.
@@ -10426,6 +10426,10 @@ body {
           flex-direction: column;
 }
 
+.container-with-margin {
+  margin-top: 20px;
+}
+
 .container {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
@@ -10436,10 +10440,6 @@ body {
   background-color: #fff;
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-}
-
-header {
-  margin-bottom: 20px;
 }
 
 .shirt-box {
@@ -10467,7 +10467,7 @@ header {
 .box-white {
   padding: 20px;
   border-radius: 10px;
-  border: 1px solid #270c0c;
+  border: 1px solid silver;
   background-color: white;
 }
 
@@ -10515,5 +10515,190 @@ header {
   float: right;
   margin-top: 10px;
   font-size: 1.2rem;
+}
+
+.obrisi {
+  margin-left: 20px;
+  padding: 0 10px;
+}
+
+#tatjana p {
+  line-height: 1.75;
+}
+
+#tatjana a:hover {
+  color: #fec503;
+}
+
+#tatjana .text-primary {
+  color: #fed136 !important;
+}
+
+#tatjana h1,
+#tatjana h2,
+#tatjana h3,
+#tatjana h4,
+#tatjana h5,
+#tatjana h6 {
+  font-weight: 700;
+  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+#tatjana section {
+  padding: 100px 0;
+}
+
+#tatjana section h2.section-heading {
+  font-size: 40px;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+#tatjana section h3.section-subheading {
+  font-size: 16px;
+  font-weight: 400;
+  font-style: italic;
+  margin-bottom: 75px;
+  text-transform: none;
+  font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+@media (min-width: 768px) {
+  #tatjana section {
+    padding: 150px 0;
+  }
+}
+
+#tatjana .btn {
+  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+
+#tatjana .btn-xl {
+  font-size: 18px;
+  padding: 20px 40px;
+}
+
+#tatjana .btn-primary {
+  background-color: #fed136;
+  border-color: #fed136;
+}
+
+#tatjana .btn-primary:active,
+#tatjana .btn-primary:focus,
+#tatjana .btn-primary:hover {
+  background-color: #fec810 !important;
+  border-color: #fec810 !important;
+  color: white;
+}
+
+#tatjana .btn-primary:active,
+#tatjana .btn-primary:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(254, 209, 55, 0.5) !important;
+          box-shadow: 0 0 0 0.2rem rgba(254, 209, 55, 0.5) !important;
+}
+
+#tatjana header.masthead {
+  text-align: center;
+  color: white;
+  background-image: url("/img/ShirtsDark.jpg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+}
+
+#tatjana header.masthead .intro-text {
+  padding-top: 150px;
+  padding-bottom: 100px;
+}
+
+#tatjana header.masthead .intro-text .intro-lead-in {
+  font-size: 22px;
+  font-style: italic;
+  line-height: 22px;
+  margin-bottom: 25px;
+  font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+#tatjana header.masthead .intro-text .intro-heading {
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 50px;
+  margin-bottom: 25px;
+  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+@media (min-width: 768px) {
+  #tatjana header.masthead .intro-text {
+    padding-top: 300px;
+    padding-bottom: 200px;
+  }
+
+  #tatjana header.masthead .intro-text .intro-lead-in {
+    font-size: 40px;
+    font-style: italic;
+    line-height: 40px;
+    margin-bottom: 25px;
+    font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+
+  #tatjana header.masthead .intro-text .intro-heading {
+    font-size: 75px;
+    font-weight: 700;
+    line-height: 75px;
+    margin-bottom: 50px;
+    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+}
+
+#tatjana .service-heading {
+  margin: 15px 0;
+  text-transform: none;
+}
+
+#tatjana .team-member {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+#tatjana .team-member img {
+  width: 225px;
+  height: 225px;
+  border: 7px solid #fff;
+}
+
+#tatjana .team-member h4 {
+  margin-top: 25px;
+  margin-bottom: 0;
+  text-transform: none;
+}
+
+#tatjana .team-member p {
+  margin-top: 0;
+}
+
+#tatjana ul.social-buttons {
+  margin-bottom: 0;
+}
+
+#tatjana ul.social-buttons li a {
+  font-size: 20px;
+  line-height: 40px;
+  display: block;
+  width: 40px;
+  height: 40px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  color: white;
+  border-radius: 100%;
+  outline: none;
+  background-color: #212529;
+}
+
+#tatjana ul.social-buttons li a:active,
+#tatjana ul.social-buttons li a:focus,
+#tatjana ul.social-buttons li a:hover {
+  background-color: #fed136;
 }
 

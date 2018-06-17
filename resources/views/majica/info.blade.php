@@ -1,7 +1,7 @@
 @extends('layouts.master')
 @section('content')
     
-    
+<div class="container container-with-margin">
     
     <div class="row">
         <div class="col-4">
@@ -21,18 +21,33 @@
     
     @auth
     <br/>
-    <form method="POST" action="/korpa/{{$majica->id}}">
+    <div class="row justify-content-start">
+        <div class="col-3">
+        <form method="POST" action="/korpa/{{$majica->id}}">
     @csrf
-    <button class="btn btn-primary inline-btns">Dodaj u korpu</button>
+    <div class="input-group">
+        <input type="number" class="form-control" value="1" name="kolicina" id="kolicina">
+        <div class="input-group-append">
+            <button class="btn btn-primary inline-btns">Dodaj u korpu</button>
+        </div>
+    </div>
+    
     </form>
-    @if (Auth::user()->admin)
+        </div>
+        <div class="col-2">
+        @if (Auth::user()->admin)
     <form method="POST" action="/majice/{{$majica->id}}/delete">
     @csrf
     <button type="submit" class="btn btn-danger inline-btns">Obrisi</button>
     </form>
-    <br/>
+    
     @endif
+        </div>
+    </div>
+    <br/>
+    
 
 
     @endauth
+</div>
 @endsection

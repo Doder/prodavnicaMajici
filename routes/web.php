@@ -13,7 +13,12 @@
 
 use App\Proizvod;
 
-Route::get('/', 'ProizvodiController@index');
+Route::get('/', function(){
+    return view('index');
+} );
+
+Route::get('/majice', 'ProizvodiController@index');
+
 
 Route::get('/majice/create', 'ProizvodiController@create')->middleware('auth');
 
@@ -29,6 +34,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/korpa', 'KorpaController@show')->middleware('auth');
 
-Route::post('/korpa/{proizvod}', 'KorpaController@create')->middleware('auth');
+Route::post('/korpa/{proizvod}', 'KorpaController@store')->middleware('auth');
 
+Route::post('/korpa/{item}/delete', 'KorpaController@destroy')->middleware('auth');
 
