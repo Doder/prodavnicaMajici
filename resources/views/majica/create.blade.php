@@ -12,7 +12,12 @@
         </div>
         <div class="form-group">
             <label for="cijena" >Cijena: </label>
+            <div class="input-group">
             <input required type="number" id="cijena" name="cijena" class="form-control" min="0" value="0" step=".01">
+            <div class="input-group-prepend">
+            <div class="input-group-text">€</div>
+            </div>
+        </div>
         </div>
         <div class="form-group">
             <label for="opis">Opis: </label>
